@@ -13,6 +13,64 @@
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
         }
+        .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+/* Close Button Styles */
+#close-modal {
+    background-color: #ff4c4c; /* Red background for emphasis */
+    color: white;             /* White text color */
+    border: none;             /* Remove default border */
+    border-radius: 5px;       /* Slightly rounded corners */
+    padding: 10px 20px;       /* Padding for size */
+    font-size: 16px;          /* Font size */
+    cursor: pointer;          /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover and Active States */
+#close-modal:hover {
+    background-color: #e63939; /* Darker red on hover */
+    transform: scale(1.05);    /* Slight zoom effect */
+}
+
+#close-modal:active {
+    background-color: #cc3333; /* Even darker red when clicked */
+    transform: scale(0.95);    /* Slightly shrink on click */
+}
+
+.modal-content {
+    background: #ffe6e6;
+    color: #e62020;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Blur Effect for Main Content */
+#main-content {
+    filter: blur(10px);
+    transition: filter 0.3s ease;
+}
+
+/* When Modal is Hidden */
+.hidden {
+    display: none;
+}
+
+.no-blur {
+    filter: none;
+}
         .container {
             text-align: center;
         }
@@ -52,6 +110,14 @@ footer p {
     </script>
 </head>
 <body>
+    
+    <div id="alert-modal" class="modal">
+        <div class="modal-content">
+            <h2><b> Alert for you cutieee</b></h2>
+            <p><b> page ma timle j j ma click garxau tesko detail haru malai aai rako hunxa tei bhanna ko lagi alert deko <br> tya talla click garerw close garerw herda hunxa.</b></p>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
 
     <div class="container">
         <h1>will you be mine forever?</h1>
@@ -63,6 +129,17 @@ footer p {
     </div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("alert-modal");
+    const mainContent = document.getElementById("main-content");
+    const closeModalButton = document.getElementById("close-modal");
+
+    closeModalButton.addEventListener("click", () => {
+        modal.classList.add("hidden");
+        mainContent.classList.add("no-blur");
+    });
+});
+
          // Check if the user already clicked "Yes"
         if (localStorage.getItem("clickedYes") === "true") {
             document.getElementById("message").innerHTML = "<h2>I love you too!</h2>";
