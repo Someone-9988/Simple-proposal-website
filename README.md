@@ -1,15 +1,15 @@
 # Interactive Proposal Website
 
-This is a fun, interactive proposal website created as a **collaborative project** with a software engineering student. I focused on the **frontend design using HTML and CSS**, while my collaborator implemented the **JavaScript interactivity**.
+This is a fun, interactive proposal website created as a collaborative project with a diploma in software engineering student. I focused on the frontend design using HTML and CSS, while my collaborator implemented the JavaScript interactivity.
 
-## Project Overview
+## PROJECT OVERVIEW
 The website displays a proposal message and interactive options:
 
 - A div shows: "Will you be mine forever?"  
 - Three clickable options: **Yes**, **Other**, and **No**  
 
-### Desktop behavior:
-- Hovering over **No** makes it move away, making it impossible to click  
+## Desktop behavior:
+- Hovering over No makes it move away, making it impossible to click  
 - Clicking **Yes** shows: "I love you too"  
 - Clicking **Other** leads to another set of options with similar hover behavior  
 - A cute note at the bottom: "please please please 🥺"  
@@ -48,6 +48,3 @@ The website displays a proposal message and interactive options:
 - Add more animations or mobile-specific enhancements  
 - Optimize layout and visuals
 
----
-
-Feel free to explore the code, and contact us if you have any questions or feedback!
