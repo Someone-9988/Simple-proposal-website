@@ -1,6 +1,6 @@
 # Interactive Proposal Website
 
-This is a fun, interactive proposal website created as a collaborative project with a diploma in software engineering student. I focused on the frontend design using HTML and CSS, while my collaborator implemented the JavaScript interactivity.
+This is a fun, interactive proposal website created as a collaborative project with a diploma in computer engineering student. I focused on the frontend design using HTML and CSS, while my collaborator implemented the JavaScript interactivity.
 
 ## PROJECT OVERVIEW
 The website displays a proposal message and interactive options:
